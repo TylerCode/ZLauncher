@@ -345,7 +345,7 @@ type StorageService interface {
 ### JNI Bridge Example
 
 ```go
-// +build android
+//go:build android
 
 package platform
 
