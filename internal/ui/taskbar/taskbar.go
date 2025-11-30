@@ -3,7 +3,6 @@ package taskbar
 
 import (
 	"image"
-	"image/color"
 	"time"
 
 	"gioui.org/layout"
@@ -101,10 +100,4 @@ func (t *Taskbar) layoutSystemTray(gtx layout.Context) layout.Dimensions {
 		label.Color = t.theme.TextPrimary
 		return label.Layout(gtx)
 	})
-}
-
-// fillRect fills a rectangle with the given color.
-func fillRect(gtx layout.Context, c color.NRGBA, size image.Point) {
-	rect := image.Rectangle{Max: size}
-	paint.FillShape(gtx.Ops, c, clip.Rect(rect).Op())
 }
