@@ -1,6 +1,6 @@
 # ZLauncher
 
-A Zorin OS-inspired launcher for Android, written in Go.
+A Zorin OS-inspired launcher for Android, written in Go using the [Gio](https://gioui.org/) UI framework.
 
 ## Overview
 
@@ -21,17 +21,61 @@ ZLauncher brings the elegant, familiar desktop experience of [Zorin OS](https://
 
 ## Tech Stack
 
-- **Language:** Go
-- **UI Framework:** [Gio](https://gioui.org/) (recommended) or [Fyne](https://fyne.io/)
-- **Platform:** Android (via gomobile/Gio Android support)
+- **Language:** Go 1.21+
+- **UI Framework:** [Gio](https://gioui.org/)
+- **Platform:** Android (via Gio Android support)
 
-## Is Writing an Android Launcher in Go Possible?
+## Building
 
-**Yes!** See our [Design Document](docs/DESIGN.md#feasibility-analysis) for a detailed feasibility analysis. The key enabler is the [Gio UI framework](https://gioui.org/), which provides cross-platform GUI capabilities including Android support with GPU-accelerated rendering.
+### Prerequisites
+
+For desktop development/testing:
+```bash
+# Ubuntu/Debian
+sudo apt-get install libxkbcommon-dev libwayland-dev libgl1-mesa-dev \
+    libvulkan-dev libxkbcommon-x11-dev libx11-xcb-dev libxcursor-dev \
+    libxfixes-dev libegl1-mesa-dev xorg-dev
+```
+
+### Build Commands
+
+```bash
+# Build for desktop (development)
+make build
+
+# Run desktop version
+make run
+
+# Build Android APK (requires gogio)
+make apk
+
+# Run tests
+make test
+
+# Lint code
+make lint
+```
+
+### Install gogio for Android builds
+
+```bash
+go install gioui.org/cmd/gogio@latest
+```
 
 ## Project Status
 
-🚧 **Planning Phase** - Currently in the design and planning stage.
+🚀 **v1 Development** - Basic project structure with Gio framework in place.
+
+### Current Progress
+- [x] Project structure setup
+- [x] Gio framework integration
+- [x] Zorin OS theme/color palette
+- [x] Basic taskbar component
+- [x] Home screen scaffold
+- [ ] App drawer/start menu
+- [ ] Desktop icon grid
+- [ ] Android platform bridge
+- [ ] App launching functionality
 
 ## Contributing
 

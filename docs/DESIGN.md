@@ -21,7 +21,7 @@
 
 ZLauncher is an Android launcher application inspired by the elegant and familiar desktop experience of Zorin OS. This document outlines the feasibility of developing such a launcher using Go, the design philosophy, architecture, and implementation strategy.
 
-**Key Finding:** Yes, writing an Android launcher in Go is feasible using the [Fyne](https://fyne.io/) toolkit or [Gio](https://gioui.org/), which provide cross-platform UI frameworks that compile to Android.
+**Key Finding:** Yes, writing an Android launcher in Go is feasible. We will use [Gio](https://gioui.org/) as our UI framework for its GPU rendering performance and Android integration capabilities.
 
 ---
 
@@ -69,7 +69,7 @@ ZLauncher is an Android launcher application inspired by the elegant and familia
 
 ### Recommendation
 
-**Use Gio UI** as the primary framework because:
+**Gio UI is our chosen framework** because:
 1. It provides the best balance of performance and flexibility
 2. It allows fine-grained control over the UI for a custom Zorin-like experience
 3. It has good Android integration for accessing launcher-specific APIs
