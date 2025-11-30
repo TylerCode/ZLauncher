@@ -1,6 +1,6 @@
-# Binaries
-zlauncher
-zlauncher-android
+# Binaries (in root directory only)
+/zlauncher
+/zlauncher-android
 *.exe
 *.apk
 bin/
